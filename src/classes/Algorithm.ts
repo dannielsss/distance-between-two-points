@@ -15,6 +15,7 @@ export class Algorithm extends Base {
   }
 
   public draw(): void {
+    this.ctx.strokeStyle = '#ffffff';
     this.ctx.beginPath();
     this.ctx.moveTo(this.point2.x, this.point2.y);
     this.ctx.lineTo(this.point1.x, this.point1.y);
@@ -25,6 +26,7 @@ export class Algorithm extends Base {
   }
 
   private drawText(): void {
+    this.ctx.fillStyle = '#ffffff';
     this.ctx.font = '12px serif';
     this.ctx.fillText(
       `d = ${this.calculateDistance()}u`,

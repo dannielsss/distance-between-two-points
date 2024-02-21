@@ -14,6 +14,7 @@ export class Point extends Base {
   }
 
   public draw(): void {
+    this.ctx.fillStyle = '#ffffff';
     this.ctx.fillRect(this.x - 2, this.y - 3, 5, 5);
   }
 }

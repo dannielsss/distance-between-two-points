@@ -33,7 +33,7 @@ export class CartesianPlane extends Base {
   }
 
   private drawLine(width: number, height: number): void {
-    this.ctx.strokeStyle = '#000000';
+    this.ctx.strokeStyle = '#ffffff59';
 
     this.ctx.beginPath();
     this.ctx.moveTo(width, height);
@@ -51,6 +51,7 @@ export class CartesianPlane extends Base {
     textX: number,
     textY: number
   ): void {
+    this.ctx.fillStyle = '#ffffff59';
     this.ctx.fillRect(x, y, width, height);
 
     this.ctx.font = '12px serif';
