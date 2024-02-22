@@ -13,8 +13,8 @@ export function setupCanvas(element: HTMLCanvasElement) {
 
     new CartesianPlane(canvasWidth, canvasHeight, ctx);
 
-    const point1 = new Point(-10, -4, ctx);
-    const point2 = new Point(12, 10, ctx);
+    const point1 = new Point(0, 0, ctx);
+    const point2 = new Point(5, 5, ctx);
 
     new Algorithm(ctx, point1, point2);
   }

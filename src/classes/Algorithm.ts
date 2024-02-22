@@ -37,8 +37,8 @@ export class Algorithm extends Base {
 
   private calculateDistance(): number {
     return Math.sqrt(
-      Math.pow(this.point2.x - this.point1.x, 2) +
-        Math.pow(this.point2.y - this.point1.y, 2)
+      Math.pow(this.point2.x / UNIT - this.point1.x / UNIT, 2) +
+        Math.pow((this.point2.y / UNIT) * -1 - (this.point1.y / UNIT) * -1, 2)
     );
   }
 }
