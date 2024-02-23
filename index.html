@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,87 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div
+      id="app"
+      class="flex h-svh items-center justify-center flex-row gap-20"
+    >
+      <form class="flex flex-col gap-5 basis-1/4" id="form">
+        <section>
+          <header class="text-xl">Point 1</header>
+          <div class="relative mt-2 rounded-md shadow-sm">
+            <div
+              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+            >
+              <span class="text-black sm:text-sm">X:</span>
+            </div>
+            <input
+              type="text"
+              name="posX1"
+              id="posX1"
+              class="block outline-none w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              autocomplete="off"
+              onchange="onChangeInput()"
+              placeholder="0"
+            />
+          </div>
+          <div>
+            <div class="relative mt-2 rounded-md shadow-sm">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              >
+                <span class="text-black sm:text-sm">Y:</span>
+              </div>
+              <input
+                type="text"
+                name="posY1"
+                id="posY1"
+                class="block outline-none w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                autocomplete="off"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </section>
+        <section>
+          <header class="text-xl">Point 2</header>
+          <div class="relative mt-2 rounded-md shadow-sm">
+            <div
+              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+            >
+              <span class="text-black sm:text-sm">X:</span>
+            </div>
+            <input
+              type="text"
+              name="posX2"
+              id="posX2"
+              class="block outline-none w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              autocomplete="off"
+              placeholder="0"
+            />
+          </div>
+          <div>
+            <div class="relative mt-2 rounded-md shadow-sm">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              >
+                <span class="text-black sm:text-sm">Y:</span>
+              </div>
+              <input
+                type="text"
+                name="posY2"
+                id="posY2"
+                class="block outline-none w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                autocomplete="off"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </section>
+      </form>
+
+      <canvas id="canvas" width="500px" height="500px"></canvas>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
