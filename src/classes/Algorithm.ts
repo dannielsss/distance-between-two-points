@@ -30,8 +30,8 @@ export class Algorithm extends Base {
     this.ctx.font = '12px serif';
     this.ctx.fillText(
       `d = ${this.calculateDistance()}u`,
-      this.point1.x + UNIT,
-      this.point2.y + UNIT
+      this.point1.x + 15,
+      this.point1.y - 20
     );
   }
 
