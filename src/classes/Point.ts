@@ -14,7 +14,9 @@ export class Point extends Base {
   }
 
   public draw(): void {
-    this.ctx.fillStyle = '#ffffff';
-    this.ctx.fillRect(this.x - 2, this.y - 3, 5, 5);
+    const circle = new Path2D();
+    circle.arc(this.x, this.y, 3, 0, 2 * Math.PI);
+
+    this.ctx.fill(circle);
   }
 }
