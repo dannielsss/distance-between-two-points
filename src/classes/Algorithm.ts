@@ -23,6 +23,17 @@ export class Algorithm extends Base {
     this.ctx.stroke();
 
     this.drawText();
+    this.drawPending();
+  }
+
+  public drawPending(): void {
+    this.ctx.fillStyle = '#ffffff';
+    this.ctx.font = '12px serif';
+    this.ctx.fillText(
+      `m = ${this.calculatePending()}`,
+      this.point1.x + 15,
+      this.point1.y - 40
+    );
   }
 
   private drawText(): void {
@@ -40,5 +51,11 @@ export class Algorithm extends Base {
       Math.pow(this.point2.x / UNIT - this.point1.x / UNIT, 2) +
         Math.pow((this.point2.y / UNIT) * -1 - (this.point1.y / UNIT) * -1, 2)
     );
+  }
+
+  private calculatePending(): number {
+    const a = this.point2.y - this.point1.y;
+    const b = this.point2.x - this.point1.x;
+    return (a / b) * -1;
   }
 }
